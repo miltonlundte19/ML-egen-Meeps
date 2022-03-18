@@ -1,0 +1,24 @@
+{% extends layout %} {% block content %}
+
+<main class="container mb-3">
+    <div>
+        <form action="">
+            <div class="input-group mb-3">
+                <label for="" class="form-label visualy-hiden"> Task </label>
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Write a Task"
+                    required
+                />
+                <button class="btn btn-primary" id="input-btn">Add task</button>
+            </div>
+        </form>
+
+        <div>
+            <ul class="list-group"></ul>
+        </div>
+    </div>
+</main>
+<script src="/js/test.js"></script>
+{% endblock %}
