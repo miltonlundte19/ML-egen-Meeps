@@ -1,16 +1,14 @@
-{% extends layout %} {% block content %}
+{% extends "layout.njk" %} 
+{% block content %}
 
 <main class="container mt-3">
     {% include 'components/postform.njk' %}
 
     <div>
         <ul class="list-group">
-            {% for body in tasks %}
+            {% for meep in meeps %}
             <li class="list-group-item d-flex justify-content-between">
-                {{ task.task }}
-                <div class="d-flex">
-                    <div class="form-check me-3"></div>
-                </div>
+                {{ meep.body }}
             </li>
             {% endfor %}
         </ul>

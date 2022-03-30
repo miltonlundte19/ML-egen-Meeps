@@ -5,6 +5,12 @@ window.addEventListener('load', () => {
         const textinput = textinputlabel.value;
         if (textinput.length < 3) {
             console.log('posten moste vara mer än 3 långt');
+        } else {
+            const url = '/';
+            fetch(url, {
+                method: 'POST',
+                body: textinput
+            }).then();
         }
     });
 });
