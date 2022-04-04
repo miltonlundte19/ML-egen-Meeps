@@ -4,12 +4,16 @@ window.addEventListener('load', () => {
     buttonlisiner.addEventListener('click', (event) => {
         const textinput = textinputlabel.value;
         if (textinput.length < 3) {
-            console.log('posten moste vara mer än 3 långt');
+            console.log('posten måste vara mer än 3 långt');
         } else {
             const url = '/';
             fetch(url, {
                 method: 'POST',
-                body: textinput
+                body: JSON.stringify({ body: textinput }),
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                }
             }).then();
         }
     });
